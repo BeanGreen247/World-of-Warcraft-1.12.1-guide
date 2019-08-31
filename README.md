@@ -106,7 +106,7 @@ sudo mv -v winetricks /usr/local/bin
 ```
 Install .NET Framework
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix WINEARCH=win64 winetricks -q --force dotnet462
+sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix WINEARCH=win64 winetricks -q --force dotnet48
 ```
 Lower audio latency
 ```
