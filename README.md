@@ -126,7 +126,7 @@ https://mega.nz/#!vkEhQQSA!AIn0hYYhZzWhB3Xu_GTT0ZAK0-Qz4cNPUMRHX15H2Fw
 
 Install dxvk 1.3.3
 
-Download https://github.com/doitsujin/dxvk/releases/download/v1.3.2/dxvk-1.3.2.tar.gz
+Download https://github.com/doitsujin/dxvk/releases/download/v1.3.3/dxvk-1.3.3.tar.gz
 
 Extract dxvk-1.3.3.tar.gz and copy its contents
 ```
