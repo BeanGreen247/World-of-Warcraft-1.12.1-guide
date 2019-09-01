@@ -171,7 +171,7 @@ Next extract World of Warcraft 1.12 Client.rar
 unrar -x ~/Downloads/World\ of\ Warcraft\ 1.12\ Client.rar /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/Program\ Files\ \(x86\)/
 ```
 
-Create a custom terminal command for launching steam!
+Create a custom terminal command for launching WoW!
 ```
 cat > wowclassic << "EOF"
 #!/bin/sh
@@ -179,7 +179,7 @@ sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wi
 
 EOF
 ```
-Create a custom terminal command for killing steam!
+Create a custom terminal command for killing WoW!
 ```
 cat > wowclassickill << "EOF"
 #!/bin/sh
