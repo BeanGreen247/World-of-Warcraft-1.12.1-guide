@@ -184,6 +184,7 @@ Create a custom terminal command for killing WoW!
 cat > wowclassickill << "EOF"
 #!/bin/sh
 sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wineserver -k
+sudo killall -9 /opt/wine-staging/bin/*
 EOF
 ```
 Make the commands executable and make them accesable from the terminal
