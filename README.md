@@ -125,14 +125,14 @@ Download World of Warcraft Vanilla 1.12
 
 https://mega.nz/#!vkEhQQSA!AIn0hYYhZzWhB3Xu_GTT0ZAK0-Qz4cNPUMRHX15H2Fw
 
-Install dxvk 1.3.3
+Install dxvk 1.4
 
-Download https://github.com/doitsujin/dxvk/releases/download/v1.3.3/dxvk-1.3.3.tar.gz
+Download https://github.com/doitsujin/dxvk/releases/download/v1.4/dxvk-1.4.tar.gz
 
-Extract dxvk-1.3.3.tar.gz and copy its contents
+Extract dxvk-1.3.tar.gz and copy its contents
 ```
-sudo cp -r dxvk-1.3.3/x64/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system32/
-sudo cp -r dxvk-1.3.3/x32/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/syswow64/
+sudo cp -r dxvk-1.3/x64/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system32/
+sudo cp -r dxvk-1.3/x32/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/syswow64/
 ```
 Open winecfg
 ```
