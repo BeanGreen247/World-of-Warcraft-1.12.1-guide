@@ -195,5 +195,25 @@ sudo mv wowclassickill /usr/bin/
 sudo chmod +x /usr/bin/wowclassickill
 ```
 Before lauching I recommend that you change the realm list to the server you want to join. For me it is Vanilla Gaming
-
+```
 set realmlist Logon.vanillagaming.org
+```
+## Troubleshooting
+If you get any error related to Windows, dlls missing or exes missing, just remove the prefix folder and start again
+```
+sudo rm -rf /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix
+```
+If the game refuses to run make sure to test if X11 allows you to open any app as root. 
+
+To do so run
+```
+sudo gedit
+```
+OR
+```
+sudo mousepad
+```
+To fix run
+```
+xhost +si:localuser:root
+```
