@@ -76,7 +76,7 @@ sudo pacman -Sy wine-staging
 ```
 And lastly install all of these packages
 ```
-sudo pacman -Sy giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader cups samba alsa alsa-utils alsa-tools gnutls libpng wine-mono lib32-libxml2 lib32-mpg123 lib32-lcms2 lib32-giflib lib32-libpng lib32-gnutls pygtk python2-dbus lib32-libpulse lib32-fontconfig lib32-libxcomposite lib32-libxrender  lib32-libxslt lib32-gnutls lib32-libxi lib32-libxrandr lib32-libxinerama lib32-libcups lib32-freetype2 lib32-libpng lib32-openal python-pyopencl lib32-v4l-utils lib32-libxcursor lib32-mpg123 lib32-sdl xf86-video-intel lib32-mesa-libgl          nss-mdns --needed --noconfirm
+sudo pacman -Sy giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader cups samba alsa alsa-utils alsa-tools gnutls libpng wine-mono lib32-libxml2 lib32-mpg123 lib32-lcms2 lib32-giflib lib32-libpng lib32-gnutls pygtk python2-dbus lib32-libpulse lib32-fontconfig lib32-libxcomposite lib32-libxrender  lib32-libxslt lib32-gnutls lib32-libxi lib32-libxrandr lib32-libxinerama lib32-libcups lib32-freetype2 lib32-libpng lib32-openal python-pyopencl lib32-v4l-utils lib32-libxcursor lib32-mpg123 lib32-sdl xf86-video-intel lib32-mesa-libgl nss-mdns --needed --noconfirm
 ```
 With that please reboot and proceed with the guide
 
@@ -87,11 +87,11 @@ With that please reboot and proceed with the guide
 
 Create the main directory (we will be using this directory for all the configurations and tweaks....may be different in your case)
 ```
-sudo mkdir /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix
+sudo mkdir /home/usernamehere/Games/classic-wow-wine-prefix
 ```
 Create wine prefix
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix WINEARCH=win64 winecfg
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix WINEARCH=win64 winecfg
 ```
 Install winetricks
 ```
@@ -101,11 +101,11 @@ sudo mv -v winetricks /usr/local/bin
 ```
 Install .NET Framework
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix WINEARCH=win64 winetricks -q --force dotnet472
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix WINEARCH=win64 winetricks -q --force dotnet472
 ```
 Lower audio latency
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix WINEARCH=win64 winetricks sound=alsa
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix WINEARCH=win64 winetricks sound=alsa
 cat > dsound.reg << "EOF"
 Windows Registry Editor Version 5.00
 
@@ -113,7 +113,7 @@ Windows Registry Editor Version 5.00
 "HelBuflen"="128"
 "SndQueueMax"="1"
 EOF
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix WINEARCH=win64 wine regedit dsound.reg
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix WINEARCH=win64 wine regedit dsound.reg
 ```
 Download World of Warcraft Vanilla 1.12
 
@@ -125,12 +125,12 @@ Download https://github.com/doitsujin/dxvk/releases/download/v1.7.1/dxvk-1.7.1.t
 
 Extract dxvk-1.7.1.tar.gz and copy its contents
 ```
-sudo cp -r dxvk-1.7.1/x64/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system32/
-sudo cp -r dxvk-1.7.1/x32/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system/
+sudo cp -r dxvk-1.7.1/x64/* /home/usernamehere/Games/classic-wow-wine-prefix/drive_c/windows/system32/
+sudo cp -r dxvk-1.7.1/x32/* /home/usernamehere/Games/classic-wow-wine-prefix/drive_c/windows/system/
 ```
 Open winecfg
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 winecfg
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix/ WINEARCH=win64 winecfg
 - Set Windows version to Windows 7 if not done already
 - Go to libraries and add
 >>d3d10
@@ -152,27 +152,27 @@ https://www.microsoft.com/en-us/download/details.aspx?id=8109
 
 Then launch it using the following command
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wine ~/Downloads/directx_Jun2010_redist.exe
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix/ WINEARCH=win64 wine ~/Downloads/directx_Jun2010_redist.exe
 ```
 It will aske where to install. Pick C:\
 
 Once done launch the installer
 ```
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wine /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/DXSETUP.exe
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix/ WINEARCH=win64 wine /home/usernamehere/Games/classic-wow-wine-prefix/drive_c/DXSETUP.exe
 ```
 
 Once finished with the install continue.
 
 Next extract World of Warcraft 1.12 Client.rar
 ```
-unrar -x ~/Downloads/World\ of\ Warcraft\ 1.12\ Client.rar /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/Program\ Files\ \(x86\)/
+unrar -x ~/Downloads/World\ of\ Warcraft\ 1.12\ Client.rar /home/usernamehere/Games/classic-wow-wine-prefix/drive_c/Program\ Files\ \(x86\)/
 ```
 
 Create a custom terminal command for launching WoW!
 ```
 cat > wowclassic << "EOF"
 #!/bin/sh
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wine /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft\ 1.12/WoW.exe
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix/ WINEARCH=win64 wine /home/usernamehere/Games/classic-wow-wine-prefix/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft\ 1.12/WoW.exe
 
 EOF
 ```
@@ -180,7 +180,7 @@ Create a custom terminal command for killing WoW!
 ```
 cat > wowclassickill << "EOF"
 #!/bin/sh
-sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wineserver -k
+sudo WINEPREFIX=/home/usernamehere/Games/classic-wow-wine-prefix/ WINEARCH=win64 wineserver -k
 sudo killall -9 /opt/wine-staging/bin/*
 EOF
 ```
@@ -198,7 +198,7 @@ set realmlist Logon.vanillagaming.org
 ## Troubleshooting
 If you get any error related to Windows, dlls missing or exes missing, just remove the prefix folder and start again
 ```
-sudo rm -rf /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix
+sudo rm -rf /home/usernamehere/Games/classic-wow-wine-prefix
 ```
 If the game refuses to run make sure to test if X11 allows you to open any app as root. 
 
