@@ -5,8 +5,8 @@ Install wine-staging. To do so follow the guide
 ```
 https://wiki.winehq.org/Download
 ```
-### Debian 10
-For **Debian 10** run these commands first
+### Debian 10/Ubuntu
+For **Debian 10/Ubuntu** run these commands first
 ```
 sudo dpkg --add-architecture i386 
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
@@ -119,14 +119,14 @@ Download World of Warcraft Vanilla 1.12
 
 https://mega.nz/#!vkEhQQSA!AIn0hYYhZzWhB3Xu_GTT0ZAK0-Qz4cNPUMRHX15H2Fw
 
-Install dxvk 1.5.3
+Install dxvk 1.7.1
 
-Download https://github.com/doitsujin/dxvk/releases/download/v1.5.3/dxvk-1.5.3.tar.gz
+Download https://github.com/doitsujin/dxvk/releases/download/v1.7.1/dxvk-1.7.1.tar.gz
 
-Extract dxvk-1.5.3.tar.gz and copy its contents
+Extract dxvk-1.7.1.tar.gz and copy its contents
 ```
-sudo cp -r dxvk-1.5.3/x64/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system32/
-sudo cp -r dxvk-1.5.3/x32/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system/
+sudo cp -r dxvk-1.7.1/x64/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system32/
+sudo cp -r dxvk-1.7.1/x32/* /mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/drive_c/windows/system/
 ```
 Open winecfg
 ```
