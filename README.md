@@ -214,3 +214,12 @@ To fix run
 ```
 xhost +si:localuser:root
 ```
+If you get this error
+```
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  10 (X_UnmapWindow)
+  Resource id in failed request:  0x1a00001
+  Serial number of failed request:  293
+  Current serial number in output stream:  296
+```
+Make sure to run the game in virtual desktop
