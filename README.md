@@ -137,6 +137,9 @@ sudo WINEPREFIX=/mnt/84C2FF4EC2FF42CA/classic-wow-wine-prefix/ WINEARCH=win64 wi
 >>d3d10_1
 >>d3d10core
 >>d3d11
+>>d3d12
+>>d3d8
+>>d3d9
 >>dxgi
 - Set them to native and click apply
 - Next go to graphics tick "Allow the window manager to control the windows"
